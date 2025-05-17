@@ -11,5 +11,4 @@ import java.util.Optional;
 public interface ReservationRepository extends JpaRepository<Reservation, Long> {
 
     Optional<Reservation> getReservationById(Long id);
-    Optional<Reservation> getUserReservations(@Param("userId") Long userId);
 }

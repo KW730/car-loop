@@ -1,5 +1,6 @@
 package car.loop.carloop.model;
 
+import car.loop.carloop.dto.UserDto;
 import car.loop.carloop.enums.UserRole;
 import jakarta.persistence.*;
 import lombok.Data;
@@ -56,5 +57,14 @@ public class User implements UserDetails {
     @Override
     public boolean isEnabled() {
         return UserDetails.super.isEnabled();
+    }
+
+    public UserDto getDto(){
+        UserDto dto = new UserDto();
+        dto.setId(id);
+        dto.setEmail(email);
+        dto.setUsername(username);
+        dto.setUserRole(userRole);
+        return dto;
     }
 }
