@@ -16,6 +16,6 @@ public class Feature {
     private Long id;
     private String name;
 
-    @ManyToMany(mappedBy = "feautres")
+    @ManyToMany(mappedBy = "features")
     private List<Vehicle> vehicles = new ArrayList<>();
 }

@@ -24,6 +24,7 @@ public class Vehicle {
     private int enginePower;
     private int productionYear;
     private String mileage;
+    private int price;
 
     @ManyToOne
     @JoinColumn(name = "owner_id")
